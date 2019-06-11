@@ -14,5 +14,6 @@ Second, I calculated the following:
 Third, I used .groupby() and 'bins' to perform calculations on certain groups, such as:
 * percentage and count of different genders and ages
 * purchase count, average purchase price, total purchase value, and average purchase total per person by gender and age groups
+* top spenders by screen name
 
 
