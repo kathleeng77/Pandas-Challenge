@@ -4,10 +4,15 @@ Pandas Challenge Analyzing Gaming Data
 
 First, I opened Jupyter Notebook from git bash, imported dependencies (pandas and numpy), and read in the .csv file.
 
-Then I calculated the following:
+Second, I calculated the following:
 * total number of players
 * number of unique items
 * average purchase price
 * total number of purchases
 * total revenue
-* percentage and count of male, female, and other/non-disclosed players
+
+Third, I used .groupby() and 'bins' to perform calculations on certain groups, such as:
+* percentage and count of different genders and ages
+* purchase count, average purchase price, total purchase value, and average purchase total per person by gender and age groups
+
+
