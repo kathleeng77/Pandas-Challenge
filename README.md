@@ -1,7 +1,6 @@
-# Pandas-Challenge
-
-Analyzing Gaming Data with the Pandas Library in Jupyter Notebook
+# Pandas Challenge (Analyzing Gaming Data with the Pandas Library in Jupyter Notebook)
 -----
+
 
 ## Analysis
 
@@ -10,9 +9,12 @@ Analyzing Gaming Data with the Pandas Library in Jupyter Notebook
 * The age group that spends the most money is the 20-24 age group.
 -----
 
+
 ## Breakdown
 
+
 #### Dependencies and Setup
+
 ```python
 # Importing Pandas Library
 import pandas as pd
@@ -25,57 +27,61 @@ raw_data = pd.read_csv(file_path)
 raw_data.head()
 ```
 
+
 #### Player Count
 
-* total number of players.
+* total number of players
 
 ```python
+# Calculate total number of players by finding unique screen names
 total_players = len(raw_data["SN"].unique())
 
+# Put into new data frame
 total_players_df = pd.DataFrame({"Total Players": [total_players]})
 
+# Print data frame
 total_players_df
 ```
 
-<div>
+![total_players](Images/total_players.png)
 
-<table class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Total Players</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>576</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 #### Purchasing Analysis
 
-* number of unique items.
-* average purchase price.
-* total number of purchases.
-* total revenue.
+* number of unique items
+* average purchase price
+* total number of purchases
+* total revenue
 
 ```python
+# Calculate number of unique items in Item ID column
 unique_items = len(raw_data["Item ID"].unique())
-avg_price = sum(raw_data["Price"])/len(raw_data["Price"])
-purchases = len(raw_data["Purchase ID"])
-revenue = sum(raw_data["Price"])
 
-purchasing_df = pd.DataFrame({"Number of Unique Items": [unique_items], "Average Price": [avg_price],
-                              "Number of Purchases":[purchases], "Total Revenue":[revenue]})
+# Calculate the total revenue by summing the Price column
+total_revenue = sum(raw_data["Price"])
 
-purchasing_df["Average Price"] = purchasing_df["Average Price"].map("${:,.2f}".format)
-purchasing_df["Total Revenue"] = purchasing_df["Total Revenue"].map("${:,.2f}".format)
+# Calculate average price by diving the sum by the length of the Price column
+avg_price = total_revenue/len(raw_data["Price"])
 
-purchasing_df
+# Calculate number of purchases
+num_of_purchases = len(raw_data["Purchase ID"])
+
+# Put into new data frame
+purchase_analysis_df = pd.DataFrame({"Number of Unique Items": [unique_items], "Average Price": [avg_price],
+                              "Number of Purchases":[num_of_purchases], "Total Revenue":[total_revenue]})
+
+# Format columns with money
+purchase_analysis_df["Average Price"] = purchase_analysis_df["Average Price"].map("${:,.2f}".format)
+purchase_analysis_df["Total Revenue"] = purchase_analysis_df["Total Revenue"].map("${:,.2f}".format)
+
+# Output data frame
+purchase_analysis_df
 ```
+
+![purchasing_analysis](Images/purchasing_analysis.png)
+
+
+#### Percentage and Count by Gender
 
 Third, I used .groupby(), 'bins', and .sort_values() to perform calculations on certain groups, such as:
 
@@ -83,22 +89,46 @@ Third, I used .groupby(), 'bins', and .sort_values() to perform calculations on 
 ```python
 ```
 
-* purchase count, average purchase price, total purchase value, and average purchase total per person by gender and age groups.
+
+#### Purchasing Analysis by Gender
+
+* purchase count
+* average purchase price
+* total purchase value
+* average purchase total per person by gender
 ```python
 ```
 
-* top spenders by screen name.
+
+#### Purchasing Analysis by Age
+
+* purchase count
+* average purchase price
+* total purchase value
+* average purchase total per person by age group
+
+#### Top Spenders
+
+* top spenders by screen name
+
 ```python
 ```
 
-* most popular items.
+#### Most Popular Items
+
+* most popular items
+
 ```python
 ```
 
-* most profitable items.
+#### Most Profitable Items
+
+* most profitable items
+
 ```python
 ```
 -----
+
 
 ## Notes
 
