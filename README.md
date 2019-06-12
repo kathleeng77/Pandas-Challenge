@@ -12,22 +12,23 @@ Analyzing Gaming Data with the Pandas Library in Jupyter Notebook
 
 ## Breakdown
 
-First, I opened Jupyter Notebook from Git Bash, imported pandas, and read in the .csv file.
+#### Dependencies and Setup
 ```python
-# Dependencies and Setup
+# Importing Pandas Library
 import pandas as pd
 
-# File to Load (Remember to Change These)
+# File to Load
 file_path = "purchase_data.csv"
 
-# Read Purchasing File and store into Pandas data frame
+# Read Purchasing File and store into pandas data frame
 raw_data = pd.read_csv(file_path)
 raw_data.head()
 ```
 
-Second, I calculated the following:
+#### Player Count
 
 * total number of players.
+
 ```python
 total_players = len(raw_data["SN"].unique())
 
@@ -36,10 +37,31 @@ total_players_df = pd.DataFrame({"Total Players": [total_players]})
 total_players_df
 ```
 
+<div>
+
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total Players</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>576</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+#### Purchasing Analysis
+
 * number of unique items.
 * average purchase price.
 * total number of purchases.
 * total revenue.
+
 ```python
 unique_items = len(raw_data["Item ID"].unique())
 avg_price = sum(raw_data["Price"])/len(raw_data["Price"])
