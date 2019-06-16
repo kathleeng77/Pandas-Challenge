@@ -3,7 +3,7 @@
 
 ## Analysis
 
-* Of the active players, the vast majority are male (84%). There also exists, a smaller, but notable proportion of female players (14%).
+* The vast majority of players are male (84%). But the female players make up a notable proportion of 14%.
 * Our peak age demographic falls between 20-24 (44.8%) with secondary groups falling between 15-19 (18.6%) and 25-29 (13.4%).
 * The age group that spends the most money is the 20-24 age group.
 
