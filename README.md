@@ -26,7 +26,7 @@ raw_data = pd.read_csv(file_path)
 # Output first rows of data frame
 raw_data.head()
 ```
-![raw_data](Images/output_1.png)
+![raw_data](Images/output_01.png)
 
 
 #### Player Count
@@ -44,7 +44,7 @@ total_players_df = pd.DataFrame({"Total Players": [total_players]})
 total_players_df
 ```
 
-![total_players](Images/output_2.png)
+![total_players](Images/output_02.png)
 
 
 #### Purchase Summary
@@ -77,7 +77,7 @@ purchase_summary_df["Total Revenue"] = purchase_summary_df["Total Revenue"].map(
 purchase_summary_df
 ```
 
-![purchase_summary](Images/output_3.png)
+![purchase_summary](Images/output_03.png)
 
 
 #### Percentage and Count by Gender
@@ -107,7 +107,7 @@ sorted_gender_demo_df = gender_demo_df.sort_values(["Total Count"], ascending = 
 sorted_gender_demo_df
 ```
 
-![gender_demo](Images/output_4.png)
+![gender_demo](Images/output_04.png)
 
 
 #### Purchase Summary by Gender
@@ -146,7 +146,7 @@ gender_summary_df["Avg Total Purchase per Person"] = gender_summary_df["Avg Tota
 gender_summary_df
 ```
 
-![gender_summary](Images/output_5.png)
+![gender_summary](Images/output_05.png)
 
 
 #### Percentage and Count by Age
@@ -180,7 +180,7 @@ age_demo_df.index.name = None
 age_demo_df
 ```
 
-![age_demo](Images/output_6.png)
+![age_demo](Images/output_06.png)
 
 
 #### Purchase Summary by Age
@@ -219,7 +219,7 @@ age_summary_df["Avg Total Purchase per Person"] = age_summary_df["Avg Total Purc
 age_summary_df
 ```
 
-![age_summary](Images/output_7.png)
+![age_summary](Images/output_07.png)
 
 
 #### Top Spenders
@@ -256,7 +256,7 @@ sorted_SN_summary_df["Total Purchase Value"] = sorted_SN_summary_df["Total Purch
 sorted_SN_summary_df.head()
 ```
 
-![SN_summary](Images/output_8.png)
+![SN_summary](Images/output_08.png)
 
 
 #### Most Popular Items
@@ -293,7 +293,7 @@ sorted_popular_df = popular_df.sort_values(["Purchase Count"], ascending = False
 sorted_popular_df.head()
 ```
 
-![popular](Images/output_9.png)
+![popular](Images/output_09.png)
 
 
 #### Most Profitable Items
